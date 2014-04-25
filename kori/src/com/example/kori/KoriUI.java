@@ -14,7 +14,7 @@ import com.vaadin.ui.Button.*;
 public class KoriUI extends UI {
 	//servletin configuraatio
 	@WebServlet(value = "/*", asyncSupported = true)
-	@VaadinServletConfiguration(productionMode = false, ui = KoriUI.class, widgetset = "com.example.kori.widgetset.KoriWidgetset")
+	@VaadinServletConfiguration(productionMode = false, ui = KoriUI.class)
 	public static class Servlet extends VaadinServlet {}
 	
 	//varsinainen elementtien asettelu
