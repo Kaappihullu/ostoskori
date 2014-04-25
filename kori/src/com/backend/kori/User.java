@@ -65,6 +65,7 @@ public class User {
 			writer.Write("id",id);
 			writer.Write("name", name);
 			writer.Write("passwd", generateAuthToken(name, passwd, id));
+			writer.Write("balance", "0");
 			writer.flush(true);
 			return true;
 		}else{
