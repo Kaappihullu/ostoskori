@@ -31,5 +31,6 @@ public abstract class Database {
 	/*public abstract IReader getReader(String query);*/
 	
 	public abstract IWriter getWriter();
+	public abstract IWriter getWriter(int index);
 	
 }

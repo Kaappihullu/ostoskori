@@ -5,7 +5,7 @@ public class AppValue {
 	public static String getValue(String name){
 		
 		if(name.equals("UserDatabase")){
-			return "C:\\JavaDev\\Users";
+			return "users.dat";
 		}
 		
 		return "";

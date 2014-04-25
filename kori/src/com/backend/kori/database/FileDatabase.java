@@ -104,8 +104,17 @@ class FileDatabase extends Database {
 	final class FileDataWriter implements Database.IWriter{
 		
 		FileDatabase m_database = null;
+		int m_index = -1;
 		
 		HashMap<String, String> m_data = new HashMap<String, String>();
+		
+		FileDataWriter(FileDatabase database, int index){
+			m_database = database;
+			m_index = index;
+			
+			m_data = m_database.m_data.get(index);
+			
+		}
 		
 		FileDataWriter(FileDatabase database){
 			m_database = database;
@@ -114,13 +123,16 @@ class FileDatabase extends Database {
 		@Override
 		public void Write(String name, Object value) {
 			m_data.put(name, value.toString());
-			
 		}
 
 		@Override
 		public void flush(boolean realFlush) {
-			m_database.m_data.add(m_data);
 			
+			if(m_index != -1){
+				m_database.m_data.set(m_index, m_data);
+			}else{
+				m_database.m_data.add(m_data);
+			}
 			if(realFlush){
 				m_database.flushData();
 			}
@@ -166,7 +178,12 @@ class FileDatabase extends Database {
 	public int getSize() {
 		return m_data.size();
 	}
-
+	
+	@Override
+	public IWriter getWriter(int index){
+		return new FileDataWriter(this,index);
+	}
+	
 	@Override
 	public IWriter getWriter() {
 		
