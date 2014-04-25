@@ -8,7 +8,7 @@ import java.util.Vector;
 
 class FileDatabase extends Database {
 
-	private static FileDatabase m_singleton = null;
+	private static  Vector<FileDatabase> m_dbList = new Vector<FileDatabase>();
 	
 	private Vector<HashMap<String, String>> m_data = new Vector<HashMap<String,String>>();
 	private String m_databaseFile = "";
@@ -88,11 +88,17 @@ class FileDatabase extends Database {
 		
 	static FileDatabase getFileDatabase(String file){
 		
-		if(m_singleton == null){
-			m_singleton = new FileDatabase(file);
+		for(FileDatabase database : m_dbList){
+			if(database.m_databaseFile.equals(file)){
+				return database;
+			}
 		}
 		
-		return m_singleton;
+		
+		FileDatabase database = new FileDatabase(file);
+		m_dbList.add(database);
+	
+		return database;
 	}
 	
 	final class FileDataWriter implements Database.IWriter{
