@@ -5,7 +5,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.UI;
 
 public class NavigatorUI extends UI {
-	Navigator navigator;
+	protected static Navigator navigator;
 	protected static final String LOGIN = "login";
 	protected static final String CONTENT = "content";
 	protected static final String REGISTER = "register";
