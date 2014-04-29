@@ -55,10 +55,27 @@ public class User {
 		
 	}
 	
+	public static boolean userExist(String name){
+		for(User user : m_users){
+			if(name.equals(user.getName())){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/*
+	 * creates new user, if successful returns true, if there already exist an user with the same name
+	 * it returns false.
+	 * 
+	 * TODO: Something somewhere somehow. About user password 'nd stuff!
+	 * 
+	 */
 	public static boolean createUser(String name, String passwd){
 		
-		if(authenticate(name, passwd) == null){
-		
+		//the user DOESN'T exist!
+		if(!userExist(name)){
+			
 			Database.IWriter writer = m_database.getWriter();
 			String id = String.valueOf(generateId());
 			
@@ -73,7 +90,10 @@ public class User {
 		}
 
 	}
-	
+	/*
+	 * Authenticates the user, and returns the User object. Returns null
+	 * if there is no user with the given name and password.
+	 */
 	public static User authenticate(String name, String password){
 		
 		if(m_users == null){
