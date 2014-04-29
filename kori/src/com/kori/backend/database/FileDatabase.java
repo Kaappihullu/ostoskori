@@ -20,7 +20,7 @@ class FileDatabase extends Database {
 		parseDatabase();
 	}
 	
-	void flushData(){
+	void flushData() {
 		try{
 				
 			FileWriter writer = new FileWriter(m_databaseFile);

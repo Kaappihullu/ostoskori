@@ -72,7 +72,7 @@ public class Register extends CustomComponent implements View {
 		cancel.addClickListener(new Button.ClickListener() {
 			public void buttonClick(ClickEvent event) {
 				cancelRegistration();
-				navigator.navigateTo("login");
+				navigator.navigateTo("login"); 
 			}
 		});
 		

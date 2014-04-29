@@ -3,7 +3,7 @@ package com.kori.backend.database;
 
 public abstract class Database {
 	
-	public interface IReader{
+	public interface IReader {
 		
 		public Object getValue(String name);
 		public Object getValue(int index);

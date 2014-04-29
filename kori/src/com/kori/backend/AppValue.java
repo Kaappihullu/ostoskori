@@ -4,7 +4,7 @@ public class AppValue {
 	
 	public static String getValue(String name){
 		
-		if(name.equals("UserDatabase")){
+		if(name.equals("UserDatabase")) {
 			return "users.dat";
 		}
 		

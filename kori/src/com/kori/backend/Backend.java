@@ -6,7 +6,7 @@ public class Backend {
 		
 	}
 	
-	public User Authenticate(String token){
+	public User Authenticate(String token) {
 		return null;
 	}
 	

@@ -15,7 +15,7 @@ public class User {
 	private static Database m_database;
 	private static int m_highId = 0;
 	
-	protected User(Database.IReader reader, Database.IWriter writer){
+	protected User(Database.IReader reader, Database.IWriter writer) {
 		m_reader = reader;
 		m_writer = writer;
 		

@@ -49,7 +49,7 @@ public class Login extends CustomComponent implements View {
 	public Login() {
 		Page.getCurrent().setTitle("Login - Ostoskori");
 		buildMainLayout();
-		setCompositionRoot(mainLayout);
+		setCompositionRoot(mainLayout); 
 		
 		login.addListener(new Button.ClickListener() {
 			@Override
