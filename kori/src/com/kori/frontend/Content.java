@@ -17,7 +17,7 @@ import com.vaadin.ui.TextField;
 
 public class Content extends CustomComponent implements View {
 	
-	@WebServlet(value = "/*", asyncSupported = true)
+	@WebServlet(value = "/content", asyncSupported = true)
 	@VaadinServletConfiguration(productionMode = false, ui = NavigatorUI.class)
 	public static class Servlet extends VaadinServlet {
 	}
@@ -58,7 +58,7 @@ public class Content extends CustomComponent implements View {
 		logout.addListener(new Button.ClickListener() {
 			public void buttonClick(ClickEvent event) {
 				// TODO logout here
-				navigator.navigateTo(NavigatorUI.LOGIN);
+				navigator.navigateTo("login");
 			}
 		}); 
 		

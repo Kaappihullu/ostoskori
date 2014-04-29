@@ -28,7 +28,7 @@ public class NavigatorUI extends UI {
 		navigator.addView(CONTENT,new Content());
 		navigator.addView(REGISTER, new Register());
 		
-		//aloitetaan login ruudusta
+		//aloitetaan login ruudusta.. menee registeriin
 		navigator.navigateTo("login");
 		
 	}

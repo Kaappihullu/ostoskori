@@ -20,7 +20,7 @@ import com.kori.backend.*;
 
 public class Login extends CustomComponent implements View {
 	
-	@WebServlet(value = "/*", asyncSupported = true)
+	@WebServlet(value = "/login", asyncSupported = true)
 	@VaadinServletConfiguration(productionMode = false, ui = NavigatorUI.class)
 	public static class Servlet extends VaadinServlet {
 	}
@@ -55,11 +55,10 @@ public class Login extends CustomComponent implements View {
 			@Override
 			public void buttonClick(ClickEvent event) {
 				//TODO login comes here
-				navigator.navigateTo(NavigatorUI.CONTENT);
+				navigator.navigateTo("content");
 			}
 		});
-
-		// TODO add user code here
+		
 	}
 
 	@Override
