@@ -1,6 +1,6 @@
 package com.frontend.kori;
 
-import vaadi., 
+//import , 
 
 public class Liittyma {
 

@@ -71,7 +71,7 @@ public class UserCreate extends CustomComponent {
 		bvalmis.setHeight("-1px");
 		mainLayout.addComponent(bvalmis, "top:180.0px;left:143.0px;");
 		
-		bvalmis.
+		//bvalmis.
 		
 		// bperuuta
 		bperuuta = new Button();

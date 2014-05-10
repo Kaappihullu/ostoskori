@@ -1,5 +1,7 @@
 package com.backend.kori;
-
+/*
+ * Doesnt do anything!
+ */
 public class Backend {
 	
 	public Backend(){
